@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Raleway:400,600,700);
 body {
-	background-color: #f3f3f3;
+/* 	background-color: #f3f3f3; */
+background-color: #eee;
 
 }
 /* Typography */
@@ -141,6 +142,7 @@ textarea {
 }
 .ba-section-black {
 	padding-bottom: 185px;
+	background: radial-gradient(closest-side at 68% 50%, #fff, #eee);
 
 }
 [class*="ba-width-"] + [class*="ba-width-"] {
