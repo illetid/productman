@@ -104,6 +104,7 @@ textarea {
 	color: #303030;
 	font-weight: 900;
 	margin: 0;
+	word-wrap: break-word;
 
 }
 .ba-section-black__text {
