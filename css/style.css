@@ -417,12 +417,13 @@ padding-top: 100px;
 		font-size: 36px;
 	}
 	.ba-grid + .ba-grid {
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .ba-grid > [class*="ba-width-"] {
     float: left;
     padding-left: 5px;
+    padding-bottom: 5px;
 }
 
 .ba-grid {
