@@ -1,8 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Raleway:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Raleway:400,600,700,900);
 body {
 /* 	background-color: #f3f3f3; */
 background-color: #eee;
-
+font-family: 'Raleway', sans-serif;
 }
 /* Typography */
 a,
@@ -64,17 +64,17 @@ textarea {
 
 .ba-header {
 	color: #303030;
-	margin-bottom: 105px;
-	padding-top: 60px;
+
+	padding: 60px 0 105px;
 
 }
 .ba-logo {
-	font: 48px 'Roboto', serif;
-	font-family: Roboto;
+	font: 48px 'Roboto', sans-serif;
 	color:  #303030;
 	font-weight: 900;
 	line-height: 27px;
 	margin: 0;
+	text-decoration: none;
 
 }
 .ba-menu  {
@@ -111,12 +111,13 @@ textarea {
 .ba-section-black__text {
 	width: 52%;
 	text-align: right;
-}
-.ba-section-black__p {
 	font: 24px/1.5 'Roboto', serif;
 	color: #303030;
 	font-weight: 300;
 	line-height: 36px;
+}
+.ba-section-black__p {
+
 	margin: 0;
 	text-align: right;
 }
@@ -125,6 +126,9 @@ textarea {
 	text-decoration: none;
 	color: #e10011;
 	font: 24px/1.5 'Roboto', serif;
+	font-family: Roboto;
+	font-weight: 700;
+
 
 }
 .ba-section-black__link:hover {
@@ -155,7 +159,6 @@ textarea {
     margin-left: -36px;
 }
 .ba-section-featured__header {
-	padding-top: 114px;
 	font: 48px 'Raleway', serif;
 	color: #303030;
 	margin: 0;
@@ -176,6 +179,7 @@ textarea {
 
 	padding: 0 72px ;
 	padding-bottom: 72px;
+	padding-top: 114px;
 
 }
 .ba-section-featured__img {
@@ -225,14 +229,14 @@ padding-right: 20px;
 }
 .ba-section-news {
 padding-top: 100px;
-	max-width: 50%;
+	max-width: 650px;
 	margin: 0 auto;
 
 
 }
 .ba-section-news__header {
 	margin: 0;
-	font-family: 'Raleway', serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 48px;
 	font-weight: 900;
 
@@ -254,13 +258,44 @@ padding-top: 100px;
 	width: 70%;
 	padding: 20px;
 	border: none;
-	border: 2px solid #fff;
+	border: 3px solid #fff;
 	border-radius: 50px 0 0 50px;
 	padding-left: 60px;
 	background: #FFF url(../img/mail.png) no-repeat 5% 50%;
 }
-.ba-field[placeholder] {
+/* .ba-field[placeholder] {
 	font-family: 'Raleway', serif;
+	color:  #979797;
+	font-size: 18px;
+	font-weight: 600;
+	font-style: italic;
+} */
+.ba-field::-webkit-input-placeholder {
+   font-family: 'Raleway', serif;
+	color:  #979797;
+	font-size: 18px;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.ba-field:-moz-placeholder { / Firefox 18- /
+   font-family: 'Raleway', serif;
+	color:  #979797;
+	font-size: 18px;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.ba-field::-moz-placeholder {  / Firefox 19+ /
+   font-family: 'Raleway', serif;
+	color:  #979797;
+	font-size: 18px;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.ba-field:-ms-input-placeholder {
+   font-family: 'Raleway', serif;
 	color:  #979797;
 	font-size: 18px;
 	font-weight: 600;
@@ -286,7 +321,11 @@ padding-top: 100px;
 	font-weight: 900;
 
 }
-
+.ba-button__subscribe:hover,.ba-button__subscribe:active  {
+	outline-style: none;
+	color: #000;
+	background-color: #E56F6F;
+}
 .ba-links {
 	margin-bottom: 40px;
 	margin: 0 auto;
@@ -316,7 +355,6 @@ padding-top: 100px;
 .ba-footer__text {
 	margin-bottom: 30px;
 	color:  #979797;
-	font-family: 'Raleway', sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 }
@@ -327,4 +365,70 @@ padding-top: 100px;
 .ba-footer__link:hover {
 	color: #CC1E1E;
 	text-decoration: underline;
+}
+@media (max-width: 767px) {
+		.ba-section-black__text {
+		width: 100%;
+		text-align: center;
+	}
+
+	.ba-section-black__img {
+		width: 100%;
+		padding: 0;
+		text-align: center;
+	}
+	.ba-section-black__title {
+		font-size: 90px;
+	}
+	.ba-nav {
+		display: none;
+	}
+	.ba-section-black__p {
+
+	margin: 0;
+	text-align: center;
+	}
+	.ba-section-featured {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+@media (max-width: 480px) {
+	..ba-section-black__title {
+		font-size: 60px;
+	}
+	.ba-button__subscribe {margin-top: 10px;
+		border-radius: 50px 50px 50px 50px;
+	width: 100%;
+	}
+	.ba-field:focus {
+	border: 2px solid #C9333E;
+	border-radius: 50px 50px 50px 50px;
+	color: #C9333E;
+	outline: none;
+	transition: all .3s ease-in-out;
+}
+	.ba-field {
+			border-radius: 50px 50px 50px 50px;
+	width: 100%;
+	}
+	.ba-section-news__header {
+		font-size: 36px;
+	}
+	.ba-grid + .ba-grid {
+    margin-top: 20px;
+}
+
+.ba-grid > [class*="ba-width-"] {
+    float: left;
+    padding-left: 5px;
+}
+
+.ba-grid {
+    margin-left: -5px;
+}
+.ba-section-featured__mask h3 {
+	font-size: 15px;
+}
 }
